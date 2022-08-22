@@ -5,7 +5,7 @@ const asyncLib  = require('async');
 //const { nextTick } = require('process');
 
 // constants
-const EMAIL_REGEX = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+const EMAIL_REGEX = /^[a-zA-Z0-9_.+-]+@groupomania.fr+$/;
 const PASSWORD_REGEX = /^.{4,8}$/;
 //mot de passe de 4 à 8 caracteres 
 

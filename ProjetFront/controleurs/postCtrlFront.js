@@ -54,6 +54,8 @@ exports.getPostAll = async (req,res) => {
 
 
 
+
+
 exports.getUserByToken = async (req, res, next) => {
 
     console.log('jy suis ');

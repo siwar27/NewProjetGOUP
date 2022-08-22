@@ -86,7 +86,22 @@ exports.logOut  = async(req, res, next) => {
     res.redirect('/login')
 }
 
-exports.getUserByToken = async (req, res, next) => {
+/*exports.getUser = async (req,res) => {
+    const users= await fetch('http://localhost:3500/api/getUser',{
+        headers: {
+            Authorization: localStorage.getItem('token'),// Token à récupérer
+        },
+
+    })
+    const getuser = await users.json()
+    if(getuser){
+        console.log(getuser)
+        res.render('profil',getuser)
+    }
+    
+}*/
+
+/*exports.getUserByToken = async (req, res, next) => {
     
     const response = await fetch('http://localhost:3500/getUser',{
         headers: {
@@ -97,4 +112,4 @@ exports.getUserByToken = async (req, res, next) => {
     console.log('myJson')
     return next();
     
-}
+}*/
