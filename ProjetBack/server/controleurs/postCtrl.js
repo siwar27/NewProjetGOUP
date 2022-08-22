@@ -148,7 +148,7 @@ console.log('---------------', userId)
     getAllPosts: (req, res) => {
 
           models.Publication.findAll({
-              attributes: [ 'id', 'userId', 'texte' ]
+              attributes: [ 'id', 'userId','texte' ]
           })
           .then((posts) => {
               res.status(200).json({success:posts})

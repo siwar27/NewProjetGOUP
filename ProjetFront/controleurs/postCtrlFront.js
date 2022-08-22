@@ -44,7 +44,7 @@ exports.getPostAll = async (req,res) => {
     const userPost = await posts.json()
     if(userPost){
         console.log(userPost)
-        res.render('test',userPost)
+        res.render('home',userPost)
     }
     
 }

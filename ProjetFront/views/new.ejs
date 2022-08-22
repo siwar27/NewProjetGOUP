@@ -3,7 +3,11 @@
             <div class="page">
                 <header class="head">
                     <img class="image3" src="/img/icon-left-font.png" alt="png">
-                    
+                    <% if(locals.success) { %>
+                        <div class="alert alert-success" role="alert">
+                            <%= locals.success %>
+                        </div>
+                     <% } %>
                       <div class="menu">
                           <div><a href="/views/home.ejs" id="hom" class="fa fa-home"></a></div>
                       
@@ -36,27 +40,27 @@
             <br>
                 <div>
                   <div class="cc">
-                            <% for (var i=locals.success.length-1 ;i>=0;  i-- ) { %>
-                                <div class="mileu" role="alert">
-                                    <%= locals.success[i].id %>
-                                    <div class="nom">
-                                        <%= locals.success[i].userId %>
-                                    </div>
-                                    <br>
-                                    <div class="IM">
-                                        <%= locals.success[i].texte %>
-                                    </div>
-                                    <br>
-                                    <br>
-                                    <div class="ICO">
-                                        <div><button onclick="clickCounter()" class="button" type="button"><i class="fa fa-thumbs-up" style="font-size:15px"><p>j'aime</p></i></button></div>
-                                        <div id="result"></div>
-                                        <div><button onclick="discounter()" class="button" type="button"><i class="fa fa-thumbs-down" style="font-size:15px"><p>je n'aime pas</p></i></button></div>
-                                        <div id="result1"></div>
-                                    </div>  
-                                    <div class="pied"></div>
+                         <% for (var i=locals.success.length-1 ;i>=0;  i-- ) { %>
+                            <div class="mileu" role="alert">
+                                <%= locals.success[i].id %>
+                                <div class="nom">
+                                    <%= locals.success[i].userId %>
                                 </div>
-                            <% } %>
+                                <br>
+                                <div class="IM">
+                                    <%= locals.success[i].texte %>
+                                </div>
+                                <br>
+                                <br>
+                                <div class="ICO">
+                                    <div><button onclick="clickCounter()" class="button" type="button"><i class="fa fa-thumbs-up" style="font-size:15px"><p>j'aime</p></i></button></div>
+                                    <div id="result"></div>
+                                    <div><button onclick="discounter()" class="button" type="button"><i class="fa fa-thumbs-down" style="font-size:15px"><p>je n'aime pas</p></i></button></div>
+                                    <div id="result1"></div>
+                                </div>  
+                                <div class="pied"></div>
+                            </div>
+                         <% } %>
                     
                        <!--a href="post.html"><img  class="image1" src="/img/Images/salon_de_the.jpg" alt="jpg" id="salon"></a>
                     </div>
@@ -74,6 +78,6 @@
                 <br>
                 </div>
             </div> 
-        </section>
-    </body>
-</html>
+            </section>
+        </body>
+    </html>

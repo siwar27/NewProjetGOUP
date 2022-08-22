@@ -61,7 +61,7 @@
     align-self: center;
     align-items: center;
     width: 50%;
-    height: 900px;
+    /*height: 900px;*/
     box-shadow: 15px;
     background-color: white;
     border:solid 1px #aea0a0;
@@ -207,7 +207,7 @@ a{
     align-self: center;
     align-items: center;
     width: 50%;
-    height: 900px;
+    /*height: 900px;*/
     box-shadow: 15px;
     background-color: white;
     border:solid 1px #aea0a0;

@@ -19,8 +19,10 @@ res.render('../views/register')
 route.post('/register', userCtrlFront.addUser);
 
 //HOME
-route.get('/test', postCtrlFront.getPostAll);
+route.get('/', postCtrlFront.getPostAll);
 route.post('/new', postCtrlFront.addPost);
+///route.post('/new', postCtrlFront.addPost);
+route.get('/new', postCtrlFront.getPostAll);
 
 
 
