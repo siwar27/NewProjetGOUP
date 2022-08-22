@@ -20,6 +20,8 @@ server.set('/img', path.join(__dirname + 'public/img'));
 server.use(express.static(path.join(__dirname + '/public')));
 
 
+
+
 // Declare API routes
 server.use('/', require('./routes/userRoute'));
 

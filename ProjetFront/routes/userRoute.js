@@ -6,6 +6,15 @@ const route = express.Router();
 const { logUser } = require('../controleurs/userCtrlFront');
 const userCtrlFront = require('../controleurs/userCtrlFront');
 const postCtrlFront = require('../controleurs/postCtrlFront');
+const multer = require ('multer');
+
+
+
+const storage=multer.diskStorage({
+    destination:function(req,file,callback){
+        callback(null)
+    }
+})
 
 
 //LOGIN
