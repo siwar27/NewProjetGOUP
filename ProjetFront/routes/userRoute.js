@@ -19,13 +19,9 @@ res.render('../views/register')
 route.post('/register', userCtrlFront.addUser);
 
 //HOME
-route.get('/', (req,res) => {
-    if(localStorage.getItem('token'))
-        res.render('../views/home')
-    else
-        res.redirect('/login')
-});
+route.get('/test', postCtrlFront.getPostAll);
 route.post('/new', postCtrlFront.addPost);
+
 
 
 

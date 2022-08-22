@@ -28,9 +28,9 @@ exports.addPost= async (req, res) => {
 // Displaying results to console
 .then(json => { 
     res.render('home',json)
+   // res.redirect('/')
 })
 
-//res.redirect('/login')
 
 }
 
@@ -43,9 +43,8 @@ exports.getPostAll = async (req,res) => {
     })
     const userPost = await posts.json()
     if(userPost){
-        res.render('home',userPost)
-    }else{
-        res.render('home',userPost)
+        console.log(userPost)
+        res.render('test',userPost)
     }
     
 }

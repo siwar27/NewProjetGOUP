@@ -148,15 +148,15 @@ console.log('---------------', userId)
     getAllPosts: (req, res) => {
 
           models.Publication.findAll({
-              attributes: [ 'id', 'userId', 'Content' ]
+              attributes: [ 'id', 'userId', 'texte' ]
           })
           .then((posts) => {
-              res.status(200).json(posts)
+              res.status(200).json({success:posts})
               //res.render('home', {data : posts})
           })
           .catch((err) => {
               console.log(err);
-              res.status(400).json({ 'error': 'An error occurred' });
+              res.status(400).json({ error: 'An error occurred' });
           });
     }
   }
