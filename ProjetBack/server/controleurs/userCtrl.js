@@ -137,7 +137,9 @@ module.exports = {
     if (userFound) {
       bcrypt.compare(password, userFound.password, function(errorBcrypt, resBcrypt) {
         if(resBcrypt) {
-        return res.status(200).json({ success: "successfully logged in", userId: userFound.id, firstname: userFound.firstname, token: jwtUtils.generateTokenForUser(userFound) });
+          
+        return res.status(200).json({ success: "successfully logged in", userId: userFound.id, nom: userFound.nom, token: jwtUtils.generateTokenForUser(userFound) });
+        
         } else {
           return res.status(403).json({ error: "invalid password" });
         }

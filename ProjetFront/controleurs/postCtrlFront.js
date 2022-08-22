@@ -20,6 +20,7 @@ exports.addPost= async (req, res) => {
         // Adding body or contents to sen
         body: JSON.stringify({
             texte : req.body.texte,
+            Attachement:req.body.Attachement,
         }),
     })
 
@@ -48,6 +49,8 @@ exports.getPostAll = async (req,res) => {
     }
     
 }
+
+
 
 
 

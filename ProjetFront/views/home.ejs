@@ -18,7 +18,7 @@
                   </header>
             <br>
             <div class="partie1">
-                <form action="/new" method="post" id="new">
+                <form action="/new" method="post" id="new" onctype="multipart/form-data">
                     <div class="input-group mb-3">
                         <!--<span class="input-group-text" id="inputGroup-sizing-default">Message</span> -->
                         <input type="text" name="texte" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Mettre votre message" autofocus>
@@ -26,7 +26,7 @@
                 
                     <div class="mb-3">
                         <label for="formFile" class="form-label"></label>
-                        <input class="form-control" type="file" id="formFile">
+                        <input class="form-control" type="file" name='Attachement' id="formFile">  
                     </div>
                     <div>
                         <input type="submit" value="Publier" id="Se-connecter"/><br>
@@ -41,11 +41,15 @@
                                     <%= locals.success[i].id %>
                                     <div class="nom">
                                         <%= locals.success[i].userId %>
+                                        <%= locals.success[i].nom %>
                                     </div>
                                     <br>
                                     <div class="IM">
                                         <%= locals.success[i].texte %>
                                     </div>
+                                    
+                                    <img src="/img/<%= locals.success[i].Attachement %>" class="image1" alt="image">
+                                
                                     <br>
                                     <br>
                                     <div class="ICO">

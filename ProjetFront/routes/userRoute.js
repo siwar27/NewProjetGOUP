@@ -10,11 +10,20 @@ const multer = require ('multer');
 
 
 
-/*const storage=multer.diskStorage({
-    destination:function(req,file,callback){
-        callback(null)
-    }
-})*/
+
+    
+const storage = multer.diskStorage({
+    destination: function (req, file, callback) {
+           callback(null, 'public/img/');
+       },
+       filename: function(req, file, callback)  {
+           callback(null, file.originalname);
+       }
+    })
+
+var upload = multer({ storage: storage });
+
+route.post('/new',upload.single('Attachement') ,postCtrlFront.addPost);
 
 
 //LOGIN
