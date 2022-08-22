@@ -10,11 +10,11 @@ const multer = require ('multer');
 
 
 
-const storage=multer.diskStorage({
+/*const storage=multer.diskStorage({
     destination:function(req,file,callback){
         callback(null)
     }
-})
+})*/
 
 
 //LOGIN
